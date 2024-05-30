@@ -4,19 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:cardCornerRadius="10dp">
+    app:cardCornerRadius="10dp"
+    app:cardUseCompatPadding="true"
+    app:strokeColor="#03DAC6"
+    app:strokeWidth="2dp">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/material_dynamic_primary90"
-        android:padding="50dp">
+        android:background="@color/white"
+        android:padding="20dp">
+
         <TextView
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Update your Message"
+            android:text="Update your Note"
+            android:textColor="#03DAC6"
             android:textSize="20dp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -25,12 +30,14 @@
 
 
         <EditText
-            android:id="@+id/tv_msg_dialog"
+            android:id="@+id/tv_note_dialog"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:background="@drawable/et_box"
-            android:padding="10dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/bd_edittext"
+            android:hint="Update Note"
+            android:paddingStart="10dp"
+            android:textColorHint="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView3" />
@@ -40,10 +47,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
+            android:backgroundTint="#03DAC6"
             android:text="Update"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_msg_dialog" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_note_dialog" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>
